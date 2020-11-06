@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>{{header}}的索引</h2>
+  <table>
+    <thread>
+      <tr class="header" id="thread">
+        <th onclick="javascript:sortTable(0);">名称</th>
+        <th class="detailsColumn" onclick="javascript:sortTable(1);">大小</th>
+        <th class="detailsColumn" onclick="javascript:sortTable(2);">修改日期</th>
+      </tr>
+    </thread>
+    <tbody id="tbody">
+      {{each files}}
+      <tr>
+        <td data-value="apple/">
+          <a href="D:/document/learnNode/02/www/apple" class="icon dir">
+            {{$value}}
+          </a>
+        </td>
+        <td class="detailColumn" data-value="0"></td>
+        <td class="detailColumn" data-value="1509589967">2017/11/2 上午10:32:47</td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>
