@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="/public/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/main.css">
   </head>
   <body>
     <div class="container">
-
-<hr>
- <a  href="addpage.html" class="btn btn-success">添加</a>
-<hr>
-    <ul class="list-group">
-      {{each dataList}}
-    <li class="list-group-item">{{$value.name}}.Say:{{$value.message}}
-      <span class="pull-right">{{$value.date}}</span>
-    </li>
-      {{/each}}
-  </ul>
+      <h1>
+        Example page header
+      </h1>
+      <small>Subtext for header</small>
+      <hr>
+      <a  href="post" class="btn btn-success">添加</a>
+      <hr>
+      <ul class="list-group">
+        {{each comments}}
+        <li class="list-group-item">{{$value.name}}  Say:  {{$value.message}}
+          <span class="pull-right">{{$value.date}}</span>
+        </li>
+        {{/each}}
+    </ul>
   </div>
   </body>
 </html>
