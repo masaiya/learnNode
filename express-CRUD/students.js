@@ -4,7 +4,6 @@
  *    操作文件中的数据，只处理数据，不关心业务
  */
 var fs = require('fs');
-const { resolve } = require('path');
 
 var dbPath = './db.json';
 /**

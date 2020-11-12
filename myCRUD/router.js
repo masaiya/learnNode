@@ -66,5 +66,11 @@ router.get('/students/delete', function(req, res) {
     res.status(500).send('Server error.');
   })
 })
+
+// Express 对于没有设定的请求路径，默认会返回 Can not get XXX
+// 如果想要定制 404 页面，需要通过中间件来配置
+router.use(function(req, res) {
+  // 所有未处理的请求路径都会来到这里
+})
 // 3. 把 router 导出
 module.exports = router;
